@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  pg-poc-refactor-tecnoanjos:
+    image: postgres:12-alpine
+    ports:
+      - "5433:5432"
+    container_name: "pg-poc-refactor-tecnoanjos"
+    restart: always
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: poc_refactor_tecnoanjos
+      POSTGRES_PASSWORD: 123
+
+volumes:
+  pgdata:
