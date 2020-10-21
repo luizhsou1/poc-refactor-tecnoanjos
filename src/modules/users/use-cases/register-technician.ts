@@ -1,4 +1,3 @@
-import * as bcrypt from 'bcrypt';
 import { UseCase } from '../../../shared/use-case';
 import { IUsersRepository } from '../repositories/users.repository';
 import { RegisterTechnicianDto } from '../dtos/register-technician.dto';
