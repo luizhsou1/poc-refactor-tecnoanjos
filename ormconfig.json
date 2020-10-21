@@ -6,7 +6,7 @@
   "password": "123",
   "database": "poc_refactor_tecnoanjos",
   "synchronize": true,
-  "logging": true,
+  "logging": false,
   "entities": [
      "src/modules/**/*.entity.{js,ts}"
   ],
