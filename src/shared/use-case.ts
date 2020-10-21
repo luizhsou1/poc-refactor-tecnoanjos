@@ -1,6 +1,6 @@
 export interface UseCase<Input, Output> {
   /**
-   * @throws Domain Error
+   * @throws Error
    */
-  execute(data?: Input): Promise<Output>;
+  execute(data?: Input): Promise<Output> | Output;
 }

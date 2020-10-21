@@ -1,6 +1,6 @@
 import * as express from 'express';
 import { router } from './routes/routes';
-import { DomainError, ValidationError } from '../shared/errors';
+import 'reflect-metadata';
 
 const app = express();
 
@@ -10,20 +10,17 @@ app.use(router);
 
 // Manipula erros da aplicação
 app.use((error, req, res, next) => {
-  if (error instanceof DomainError) {
-    return res.status(400).json({
+  if (error.httpStatusCode) {
+    return res.status(error.httpStatusCode).json({
       error: error.name,
       message: error.message,
-    });
-  }
-  if (error instanceof ValidationError) {
-    return res.status(400).json({
-      error: error.name,
       param: error.param,
-      message: error.message,
     });
   }
-  return res.status(500).json({ error: 'InternalServerError', stack: error });
+  return res.status(500).json({
+    error: 'InternalServerError',
+    stack: process.env.NODE_ENV === 'development' ? error.stack : undefined,
+  });
 });
 
 export { app };
