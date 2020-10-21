@@ -11,7 +11,6 @@ export class RegisterTechnician implements UseCase<RegisterTechnicianDto, LoginD
   ) {}
 
   async execute(data: RegisterTechnicianDto): Promise<LoginDtoOutput> {
-    // TODO Pode tirar daqui
     let user = await this.usersRepo.findByEmail(data.email);
     if (user) {
       throw new ConflictError('E-mail já está sendo utilizado por outro usuário');
@@ -23,7 +22,7 @@ export class RegisterTechnician implements UseCase<RegisterTechnicianDto, LoginD
 
     user = await this.usersRepo.createTechnician(data);
 
-    const acessToken = 'token_gerado_por_alguma_lib_de_jwt'; // TODO Voltar e refazer essa parte
+    const acessToken = 'token_gerado_por_alguma_lib_de_jwt';
 
     return { user, acessToken };
   }
