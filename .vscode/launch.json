@@ -12,6 +12,18 @@
       "port": 9223,
       "restart": true,
       "timeout": 10000
+    },
+    {
+      "type": "node",
+      "request": "attach",
+      "name": "Docker: Attach to Node",
+      "port": 7001,
+      "address": "localhost",
+      "localRoot": "${workspaceFolder}",
+      "sourceMapPathOverrides": {
+        "/app/*": "${workspaceRoot}/*"
+      },
+      "remoteRoot": "/app/"
     }
   ]
 }
