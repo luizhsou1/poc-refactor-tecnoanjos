@@ -13,7 +13,7 @@
 - Retorna erro **404** se a API não existir
 - Retorna erro **400** se o body quebrar alguma restrição
 - Retorna erro **409** se já existir um usuário com esse e-mail cadastrado
-- Retorna erro **500** se acontecer não esperado na request
+- Retorna erro **500** se acontecer algo não esperado na request
 
 ## Exemplo de uma requisição
 
