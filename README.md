@@ -47,4 +47,3 @@ Rode `npm run <script name>`:
 2. Caso deseje debugar **utilizando o VS Code**, já acompanha um arquivo de configuração para dar um attach no processo em execução, basta antes ter rodado `npm run dev`, caso use outra IDE, basta configurar para escutar o processo que rode na porta 9223.
 3. Cobertura de testes está apenas no caso de uso  **Registrar Técnico**, porém com o tempo outras camadas também devem ser cobertas por testes, inclusive testes de integração.
 4. Foi configurado o linter para utilizar as configurações usadas pelo **Airbnb**, com algumas modificações que gosto de usar nos meus projeto.
-5. Caso deseje testar o projeto, sem configurar na sua máquina, comunique com o serviço criado no heroku, usando a seguinte url: 
