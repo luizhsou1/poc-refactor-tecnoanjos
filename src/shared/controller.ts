@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from 'express';
-import { validateOrReject, validate } from 'class-validator';
+import { validateOrReject } from 'class-validator';
 import { plainToClass } from 'class-transformer';
-import { BadRequestError } from './errors';
+import { BadRequestError } from './errors/bad-request.error';
 
 // TODO Acoplado ao framework express, caso dê tempo,
 // volte e crie uma interface HttpRequest e HttpResponse e crie um adapter para o express
